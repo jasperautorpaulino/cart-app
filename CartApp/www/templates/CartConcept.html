@@ -1,0 +1,23 @@
+
+  <ion-view title="Cart Concepts" id="page6">
+    <ion-content padding="true" class="has-header" ng-controller="cartConceptCtrl">
+    <div class="spacer" style="height: 20px;"></div>
+       <ion-list ng-repeat="fc in foodcartconcept track by $index">
+        <ion-item>
+        Concept ID
+        <span class="item-note">
+          {{fc.conceptid}}
+        </span>
+        </ion-item>
+
+        <!--ion-item>
+        Concept Name
+        <span class="item-note">
+        {{fc.concept}}
+        </span>
+        </ion-item-->
+
+       <div class="spacer" style="height: 20px;"></div>
+       </ion-list>
+    </ion-content>
+  </ion-view>

@@ -1,0 +1,28 @@
+<ion-view title="Login" hide-nav-bar="true" id="page7">
+    <ion-content padding="true" class="manual-ios-statusbar-padding" ng-controller="loginCtrl">
+        <div class="spacer" style="height: 20px;"></div>
+        <div>
+            <img src="img/ZKM5TrS5QnisZz1kY7Ji_oYu597LxRYyyV5IyiJKw_fs_logo.png" width="100" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        <div class="spacer" style="height: 15px;"></div>
+        <div style="text-align:center; color:black;"><strong>FRANCHiSE MANAGEMENT SYSTEM</strong></div>
+
+            <div class="spacer" style="height: 20px;"></div> 
+
+            <div class="list">
+                <label class="item item-input item-floating-label" id="login-input8">
+                    <span class="input-label" style="color:black;">Username</span>
+                    <input type="text" placeholder="Username" ng-model="user" style="color:black;">
+                </label>
+                <label class="item item-input item-floating-label" id="login-input9">
+                    <span class="input-label" style="color:black;">Password</span>
+                    <input type="password" placeholder="Password" ng-model="password" style="color:black;">
+                </label>
+            </div>
+
+            <a id="login-button4" class='btn btn-raised ink-reaction btn-primary btn-block' ng-click="login()">  Log in  </a>
+            <!--a id="login-button4" class='btn ink-reaction btn-accent btn-block' ng-click="loginEmployee()">  Log in as Employee  </a-->
+        <div class = "title" style="align:center; color:black; text-align:center;"> Copyright 2016 - Franchise Admin © </div>
+    </div>
+    </ion-content>
+</ion-view>

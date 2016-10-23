@@ -1,0 +1,39 @@
+<ion-view title="View Concepts" id="page15">
+	<ion-header-bar class="bar bar-header"  style="background-color:#886aea;">
+  		<h1 class="title" style="color:white;">View All Concepts</h1>
+  	</ion-header-bar>
+
+    <ion-content padding="true" class="has-header" ng-controller="viewConceptsCtrl">
+    <div class="list list-inset">
+          <label class="item item-input">
+            <i class="icon ion-search placeholder-icon">
+            </i>
+            <input type="text" placeholder="search" ng-model="concepts">
+          </label>
+        </div>
+
+      <div class='table-responsive'>
+      <table class="table table-striped table-hover">
+      <thead style="color:white;background-color: #444;">
+        <tr>
+          <th style="padding: 10px;">Concept ID</th>
+          <th style="padding: 10px;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="concept in conceptList | filter: concepts">
+          <td style="padding: 10px;">{{concept.Concept}}</td>
+          <td style="padding: 10px;">{{concept.Description}}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <!--div>
+
+		<ul  ng-repeat = "concept in conceptList">
+			<li>{{concept.Concept}} - {{concept.Description}}</li>
+		</ul>
+	</div-->
+    </ion-content>
+</ion-view>

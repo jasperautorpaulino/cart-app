@@ -1,0 +1,33 @@
+ <ion-modal-view title="Edit Details" id="page19">
+<ion-header-bar class="bar bar-header" style="background-color:#886aea;">
+    <h1 class="title" style="color:white;">Order Summary</h1>
+    <button class="button button-clear" ng-click="closeCart()">close</button>
+    </ion-header-bar>
+    <ion-content padding="true" class="has-header">
+        <ion-list id="editDetails-list15" ng-repeat="prod in products">
+            <ion-item>Description
+                <span class="item-note">
+                {{prod.descc}}
+                </span>
+            </ion-item>
+            <ion-item>Quantity
+                <span class="item-note">
+                {{prod.Quantity}}
+                </span> 
+            </ion-item>
+            <ion-item>Cost Price
+                <span class="item-note">
+                Php {{prod.price}}
+                </span>
+            </ion-item>
+            <ion-item> Total Amount
+                <span class="item-note">
+                Php {{(prod.Quantity * prod.price)}}
+                </span>
+            </ion-item>
+
+            <div class="spacer" style="width: 300px; height: 20px;"></div>
+        </ion-list>
+        <a ng-click="closeCart()" id="editDetails-button29" class='btn btn-raised ink-reaction btn-primary btn-block '>Close</a>
+    </ion-content>
+</ion-modal-view>

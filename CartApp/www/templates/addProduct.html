@@ -1,0 +1,36 @@
+<ion-view title="View Products" id="page12">
+    <ion-content padding="true" class="has-header" ng-controller="addProductCtrl">
+        <form id="addProduct-form6" class="list ">
+            <div class="spacer" style="width: 100px; height: 10px;"></div>
+            <div class="list list-inset">
+          <label class="item item-input">
+            <i class="icon ion-search placeholder-icon">
+            </i>
+            <input type="text" placeholder="search" ng-model="prdct">
+          </label>
+        </div>
+            <ion-list ng-repeat="product in productList | filter: prdct">
+            <ion-item ng-click="defineProductQuantity('{{product.descc}}','{{product.prod}}', '{{product.price}}')">
+            {{product.descc}}
+                <span class="item-note">
+                    Php {{product.price}}
+                </span>
+                <!--ion-option-button class="button-calm" >
+                    Purchase
+                </ion-option-button-->
+            </ion-item>
+            <ion-item>
+            Product ID
+            <span class="item-note">
+                {{product.prod}}
+            </span>
+            </ion-item>
+            <div class="spacer" style="width: 300px; height: 20px;"></div>
+            </ion-list>
+
+            <button id="addProduct-button20" class='btn btn-raised ink-reaction btn-primary btn-block' ng-click="showPopup()">Choose Payment Type</button>
+            <button id="addProduct-button20" class='btn btn-raised ink-reaction btn-primary btn-block' ng-click="openCart()">View order overview</button>
+            <a ui-sref="tabsController.orders" id="addProduct-button21" class='btn btn-raised ink-reaction btn-accent btn-block'>Cancel</a>
+        </form>
+    </ion-content>
+</ion-view>

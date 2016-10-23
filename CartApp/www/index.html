@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    
+    <!-- BEGIN STYLESHEETS -->
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-default/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-default/materialadmin.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-default/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-default/material-design-iconic-font.min.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/rickshaw/rickshaw.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/morris/morris.core.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/toastr/toastr.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/DataTables/jquery.dataTables.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/DataTables/extensions/dataTables.colVis.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/DataTables/extensions/dataTables.tableTools.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/theme-default/libs/wizard/wizard.css" />
+    
+    <!-- BEGIN JAVASCRIPT -->
+
+    <script src="assets/js/libs/jquery/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/js/libs/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/js/libs/spin.js/spin.min.js"></script>
+    <script src="assets/js/libs/autosize/jquery.autosize.min.js"></script>
+    <script src="assets/js/libs/moment/moment.min.js"></script>
+    <script src="assets/js/libs/DataTables/jquery.dataTables.min.js"></script>
+    <script src="assets/js/libs/DataTables/extensions/ColVis/js/dataTables.colVis.min.js"></script>
+    <script src="assets/js/libs/DataTables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+    <script src="assets/js/libs/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="assets/js/libs/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="assets/js/libs/mask/jquery.mask.min.js"></script>
+    <script src="assets/js/libs/toastr/toastr.js"></script>
+    <script src="assets/js/libs/typeahead/typeahead.bundle.min.js"></script>
+    <script src="assets/js/libs/select2/select2.min.js"></script>
+    <script src="assets/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+    <script src="assets/js/libs/wizard/jquery.bootstrap.wizard.min.js"></script>
+    <script src="assets/js/core/source/App.js"></script>
+    <script src="assets/js/core/source/AppNavigation.js"></script>
+    <script src="assets/js/core/source/AppOffcanvas.js"></script>
+    <script src="assets/js/core/source/AppCard.js"></script>
+    <script src="assets/js/core/source/AppForm.js"></script>
+    <script src="assets/js/core/source/AppNavSearch.js"></script>
+    <script src="assets/js/core/source/AppMessages.js"></script>
+    <script src="assets/js/core/source/AppVendor.js"></script>
+    <script src="assets/js/core/demo/Demo.js"></script>
+    <script src="assets/js/core/demo/DemoFormWizard.js"></script>
+
+
+
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/ngStorage.min.js"></script>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <link href="lib/ion-floating-menu/dist/ion-floating-menu.css" rel="stylesheet" type="text/css"/>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+    <script src="js/app.js"></script>
+    <script src="js/routes.js"></script> 
+    <script src="js/directives.js"></script>
+    <script src="js/foodcartFactory.fac.js"></script>
+    <script src="js/controllers/login.ctrl.js"></script>
+    <script src="js/controllers/home.ctrl.js"></script>
+    <script src="js/controllers/mycarts.ctrl.js"></script>
+    <script src="js/controllers/orders.ctrl.js"></script>
+    <script src="js/controllers/addProduct.ctrl.js"></script>
+    <script src="js/controllers/addEquipment.ctrl.js"></script>
+    <script src="js/controllers/editDetailsModal.ctrl.js"></script>
+    <script src="js/controllers/viewCarts.ctrl.js"></script>
+    <script src="js/controllers/viewConcepts.ctrl.js"></script>
+    <script src="js/controllers/profile.ctrl.js"></script>
+    <script src="js/controllers/ordersuccessful.ctrl.js"></script>
+    <script src="js/controllers/delivery.ctrl.js"></script>
+    <script src="js/controllers/CartConcept.ctrl.js"></script>
+
+    <script src="lib/ion-floating-menu/dist/ion-floating-menu.js"></script>
+    <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+
+    <style type="text/css">
+      .platform-ios .manual-ios-statusbar-padding{
+        padding-top:20px;
+      }
+      .manual-remove-top-padding{
+        padding-top:0px; 
+      }
+      .manual-remove-top-padding .scroll{
+        padding-top:0px !important;
+      }
+      ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+        margin-left:-10px;
+        margin-right:-10px;
+      }
+      ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+        border-radius:0px;
+        border-left:0px;
+        border-right: 0px;
+      }
+      .popup-head{
+        background-color: #387ef5;
+        color: white;
+      }
+      .popup-body{
+        background-color: #387ef5;
+        font-color: white;
+      }
+      .popup-title{
+        color: white;
+      }
+    </style>
+    
+
+  </head>
+  <body animation="slide-left-right-ios7">
+  <div>
+    <div>
+        <ion-nav-bar class="bar-positive has-tabs-top">
+            <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Back</ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view></ion-nav-view>
+    </div>
+</div>
+
+<!--div class="btn-floating-action" style="bottom:45px; right:24px;">
+    <a btn-floating-action btn-large red"><i>add</i></a>
+</div-->
+  </body>
+</html>

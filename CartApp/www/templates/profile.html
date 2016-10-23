@@ -1,0 +1,39 @@
+<ion-view title="Profile" id="page4">
+    <ion-content padding="true" class="has-header" ng-controller="profileCtrl">
+        <div class="spacer" style="width: 300px; height: 28px;"></div>
+
+        <ion-list ng-repeat="info in FranchiseeInfo">
+            <ion-item>
+             Name
+             <span class="item-note">
+             {{info.Name}}
+             </span>
+            </ion-item>
+
+            <ion-item>
+            Franchisee ID
+            <span class="item-note">
+            {{info.ID}}
+            </span>
+            </ion-item>
+
+            <ion-item>
+             Address
+             <span class="item-note">
+             {{info.Address}}
+             </span>
+            </ion-item>
+
+            <ion-item>
+            Email
+            <span class="item-note">
+            {{info.email}}
+            </span>
+            </ion-item>
+        <div class="spacer" style="width: 300px; height: 28px;"></div>
+        </ion-list>
+        <!--a ng-click="openModalEditDetails()" id="profile-button2" class='btn btn-raised ink-reaction btn-primary btn-block'>Edit Details</a-->
+        <a id="profile-button1" class='btn btn-raised ink-reaction btn-accent btn-block ' ng-click="showConfirm()">
+        Log Out</a>
+    </ion-content>
+</ion-view>

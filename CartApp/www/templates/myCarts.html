@@ -1,0 +1,35 @@
+<ion-view title="My Carts" id="page3">
+    <ion-content padding="true" class="has-tabs-top" ng-controller="myCartsCtrl">
+
+    <ion-list ng-repeat="uf in userFoodcart track by $index">
+            <ion-item ui-sref="tabsController.CartConcept">
+            <strong>Foodcart ID</strong>
+                <span class="item-note">
+                    {{uf.foodcartid}}
+                </span>
+                <!--ion-option-button class="button-calm"">
+                    View Cart Concepts
+                </ion-option-button-->
+            </ion-item>
+            <ion-item>
+            Foodcart Name
+                <span class="item-note">
+                    {{uf.foodcartname}}
+                </span>
+            </ion-item>
+            <ion-item>
+            Acquired Date
+                <span class="item-note">
+                    {{uf.acquired}}
+                </span>
+            </ion-item>
+            <ion-item>
+            Expiration Date
+                <span class="item-note">
+                    {{uf.expiration}}
+                </span>
+            </ion-item>
+        <div class="spacer" style="height: 20px;"></div>
+            </ion-list>
+    </ion-content>
+</ion-view>

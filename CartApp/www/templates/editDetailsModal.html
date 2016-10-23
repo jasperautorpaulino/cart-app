@@ -1,0 +1,24 @@
+<ion-modal-view title="Edit Details" id="page19">
+<ion-header-bar class="bar bar-header" style="background-color:#886aea;">
+    <h1 class="title" style="color:white;">Edit Details</h1>
+    <button class="button button-clear" ng-click="closeModalEditDetails()">close</button>
+    </ion-header-bar>
+    <ion-content padding="true" class="has-header">
+        <ion-list id="editDetails-list15">
+            <label class="item item-input item-floating-label" id="editDetails-input16">
+                <span class="input-label">Franchisee Name</span>
+                <input type="text" placeholder="Franchisee Name" ng-model="name">
+            </label>
+            <label class="item item-input item-floating-label" id="editDetails-input16">
+                <span class="input-label">Address</span>
+                <input type="text" placeholder="Address" ng-model="address">
+            </label>
+            <label class="item item-input item-floating-label" id="editDetails-input17">
+                <span class="input-label">Email</span>
+                <input type="email" placeholder="Email Address" ng-model="email">
+            </label>
+        </ion-list>
+        <a ui-sref="profile.html" ng-click="closeModalEditDetails()" id="editDetails-button29" class='btn btn-raised ink-reaction btn-primary btn-block '>Save Changes</a>
+        <a ng-click="closeModalEditDetails()" id="editDetails-button30" class='btn btn-raised ink-reaction btn-accent btn-block '>Cancel</a>
+    </ion-content>
+</ion-modal-view>

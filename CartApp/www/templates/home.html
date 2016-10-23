@@ -1,0 +1,10 @@
+<ion-view title="Home" id="page2">
+    <ion-content padding="true" class="has-header" ng-controller="homeCtrl">
+        <h1 ng-repeat="info in FInfo track by $index">Welcome, {{info.Name}}!</h1>
+
+        <div class="spacer" style="width: 20px; height: 20px;"></div>
+            <a ui-sref = 'tabsController.viewCarts'  id="home-button22" class='btn btn-raised ink-reaction btn-primary btn-block'>View All Carts</a>
+            <a ui-sref = 'tabsController.viewConcepts'  id="home-button24" class='btn btn-raised ink-reaction btn-primary btn-block'>View All Concepts</a>
+        <div class="spacer" style="width: 300px; height: 94px;"></div>
+    </ion-content>
+</ion-view>
